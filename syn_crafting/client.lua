@@ -127,7 +127,7 @@ end)
 
 Citizen.CreateThread(function()
     while true do 
-        Citizen.Wait(100)
+        Citizen.Wait(1)
         local player = PlayerPedId()
         local Coords = GetEntityCoords(player)
         local campfire = DoesObjectOfTypeExistAtCoords(Coords.x, Coords.y, Coords.z, 2.5, GetHashKey("p_campfire02x"), 0) -- prop required to interact
