@@ -148,7 +148,7 @@ AddEventHandler("syn:crafting", function()
     local playerPed = PlayerPedId()
     
         TaskStartScenarioInPlace(playerPed, GetHashKey('WORLD_HUMAN_CROUCH_INSPECT'), 15000, true, false, false, false)
-        exports['progressBars']:startUI(15000, "You're cooking some meat...")
+        exports['progressBars']:startUI(15000, "You're crafting...")
         Citizen.Wait(15000)
 
         keyopen = false
