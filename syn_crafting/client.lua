@@ -109,7 +109,7 @@ function OpenCraftMenu()
 end
 
 Citizen.CreateThread( function()
-	WarMenu.CreateMenu('craftmenu', 'meat type')
+	WarMenu.CreateMenu('craftmenu', 'Craft')
 	repeat
 		if WarMenu.IsMenuOpened('craftmenu') then
 			for i = 1, #crafting do
