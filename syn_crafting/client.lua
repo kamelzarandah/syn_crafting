@@ -1,6 +1,6 @@
 -- Made by Blue & Dungeon for Syn County RP
 -- credits to malik & the creator of kcrp_boats_vorp
-
+local campfire = 0 
 local crafting = {
 
     --Food
@@ -177,3 +177,15 @@ AddEventHandler('syn:campfire', function()
     campfire = prop
 
 end)
+
+
+RegisterCommand('deletecampfire', function(source, args, rawCommand)
+    if campfire == 0 then
+     --   print("There is no campfire.")
+    else
+        SetEntityAsMissionEntity(campfire)
+        DeleteObject(campfire)
+        campfire = 0
+		TriggerServerEvent('syn:additem', "campfire")
+    end
+end, false)
