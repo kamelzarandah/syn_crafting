@@ -179,13 +179,13 @@ AddEventHandler('syn:campfire', function()
 end)
 
 
-RegisterCommand('deletecampfire', function(source, args, rawCommand)
+RegisterCommand('dcampfire', function(source, args, rawCommand)
     if campfire == 0 then
      --   print("There is no campfire.")
     else
         SetEntityAsMissionEntity(campfire)
         DeleteObject(campfire)
         campfire = 0
-		TriggerServerEvent('syn:additem', "campfire")
+		TriggerServerEvent('syn:additem')
     end
 end, false)
