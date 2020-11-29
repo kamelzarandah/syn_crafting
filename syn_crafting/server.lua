@@ -71,5 +71,9 @@ AddEventHandler( 'syn:craftingalg', function (args)
     end
 
 end)
-
+VorpInv.RegisterUsableItem("campfire", function(data)
+        VorpInv.subItem(data.source, "campfire", 1)
+        TriggerClientEvent("vorp:TipRight", data.source, "You're placing a campfire", 5000)
+        TriggerClientEvent("syn:campfire", data.source)
+    end)
 
