@@ -39,7 +39,7 @@ AddEventHandler( 'syn:craftingalg', function (args)
                     VorpInv.addItem(source, reward, RewardCount)
                     TriggerClientEvent("vorp:TipRight", source, "You finished crafting", 3000)
                 else
-                    --print("test")
+                   -- print("test1")
                     TriggerClientEvent("vorp:TipRight", source, "Not enough material for this recipe", 3000)
                 end
             elseif min3> min4 then
@@ -51,18 +51,20 @@ AddEventHandler( 'syn:craftingalg', function (args)
                     VorpInv.addItem(source, reward, RewardCount)
                     TriggerClientEvent("vorp:TipRight", source, "You finished crafting", 3000)
                 else
+                   -- print("test2")
                     TriggerClientEvent("vorp:TipRight", source, "Not enough material for this recipe", 3000)
                 end
             else
+               -- print("test3")
                 TriggerClientEvent("vorp:TipRight", source, "Not enough material for this recipe", 3000)
             end
         else 
-           -- print("test")
+           -- print("test4")
 
             TriggerClientEvent("vorp:TipRight", source, "Not enough material for this recipe", 3000)
         end
     else
-       -- print("test")
+   -- print("test5")
     TriggerClientEvent("vorp:TipRight", source, "Not enough material for this recipe", 3000)
     return
         
@@ -71,16 +73,3 @@ AddEventHandler( 'syn:craftingalg', function (args)
 end)
 
 
---if you are using malik items u can comment out below 
-VorpInv.RegisterUsableItem("campfire", function(data)
-    VorpInv.subItem(data.source, "campfire", 1)
-    TriggerClientEvent("vorp:TipRight", data.source, "You're placing a campfire", 5000)
-    TriggerClientEvent("syn:campfire", data.source)
-end)
-
-
-RegisterNetEvent("syn:additem")
-AddEventHandler("syn:additem", function(item)
-    local _source = source
-    VorpInv.addItem(source, "campfire", 1)
-end)
