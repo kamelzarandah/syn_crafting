@@ -215,3 +215,17 @@ AddEventHandler('syn:campfire', function()
     campfire = prop
 
 end)
+
+RegisterCommand('dcampfire', function(source, args, rawCommand)
+    if campfire == 0 then
+     --   print("There is no campfire.")
+    else
+        SetEntityAsMissionEntity(campfire)
+        DeleteObject(campfire)
+        campfire = 0
+		TriggerServerEvent('syn:additem', "campfire")
+    end
+end, false)
+
+local campfire = 0 
+
