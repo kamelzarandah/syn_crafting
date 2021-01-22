@@ -76,4 +76,8 @@ VorpInv.RegisterUsableItem("campfire", function(data)
         TriggerClientEvent("vorp:TipRight", data.source, "You're placing a campfire", 5000)
         TriggerClientEvent("syn:campfire", data.source)
     end)
-
+RegisterNetEvent("syn:additem")
+AddEventHandler("syn:additem", function(item)
+    local _source = source
+    VorpInv.addItem(source, item, 1)
+end)
