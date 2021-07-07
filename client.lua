@@ -16,6 +16,7 @@ function whenKeyJustPressed(key)
 end
 
 local keyopen = false
+local craftingx = Config.crafting
 
 Citizen.CreateThread(function()
     WarMenu.CreateMenu('Craft', "Craft")
@@ -45,9 +46,16 @@ Citizen.CreateThread( function()
 	WarMenu.CreateMenu('craftmenu', 'craft menu')
 	repeat
 		if WarMenu.IsMenuOpened('craftmenu') then
-			for i = 1, #Config.crafting do
-				if WarMenu.Button(Config.crafting[i]['Text'], Config.crafting[i]['SubText'], Config.crafting[i]['Desc']) then
-					TriggerServerEvent('syn:craftingalg', Config.crafting[i]['Param'])
+			for i = 1, #craftingx do
+				if WarMenu.Button(craftingx[i]['Text'], craftingx[i]['SubText'], craftingx[i]['Desc']) then
+                    TriggerEvent("vorpinputs:getInput","Confirm","Amount", function(cb)
+                        local count = tonumber(cb)
+                        if count ~= nil and count ~= 'close' and count ~= '' and count ~= 0 then
+                            TriggerServerEvent('syn:craftingalg', craftingx[i]['Param'],count)
+                        else
+                            TriggerEvent("vorp:TipBottom", "Invalid Amount", 4000)
+                        end
+                    end)
 					WarMenu.CloseMenu()
 				end
 			end
@@ -98,7 +106,7 @@ AddEventHandler("syn:crafting", function()
         iscrafting = false
 end)
 
-RegisterNetEvent('syn:campfire')
+--[[ RegisterNetEvent('syn:campfire')
 AddEventHandler('syn:campfire', function()
 
     if campfire ~= 0 then
@@ -117,4 +125,4 @@ AddEventHandler('syn:campfire', function()
     PlaceObjectOnGroundProperly(prop)
     campfire = prop
 
-end)
+end) ]]

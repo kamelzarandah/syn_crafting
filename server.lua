@@ -9,15 +9,15 @@ VorpInv = exports.vorp_inventory:vorp_inventoryApi()
 
 
 RegisterServerEvent('syn:craftingalg')
-AddEventHandler( 'syn:craftingalg', function (args)
+AddEventHandler( 'syn:craftingalg', function (args,countz)
     local _source = source
     local Character = VorpCore.getUser(_source).getUsedCharacter
     local job2 = Character.job
-    local count    = args['Count']
-    local count2    = args['Count2']
-    local count3    = args['Count3']
+    local count    = args['Count'] * countz
+    local count2    = args['Count2']* countz
+    local count3    = args['Count3']* countz
     local reward    = args['Reward']
-    local RewardCount     = args['RewardCount']
+    local RewardCount     = args['RewardCount'] * countz
     local item     = args['Item']
     local item2     = args['Item2']
     local item3     = args['Item3']
@@ -80,9 +80,9 @@ AddEventHandler( 'syn:craftingalg', function (args)
     end
 
 end)
-VorpInv.RegisterUsableItem("campfire", function(data)
+--[[ VorpInv.RegisterUsableItem("campfire", function(data)
         VorpInv.subItem(data.source, "campfire", 1)
         TriggerClientEvent("vorp:TipRight", data.source, "You're placing a campfire", 5000)
         TriggerClientEvent("syn:campfire", data.source)
-    end)
+    end) ]]
 
