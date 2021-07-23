@@ -17,7 +17,6 @@ AddEventHandler( 'syn:craftingalg', function (args,countz)
     local count2    = args['Count2']* countz
     local count3    = args['Count3']* countz
     local reward    = args['Reward']
-    local RewardCount     = args['RewardCount'] * countz
     local item     = args['Item']
     local item2     = args['Item2']
     local item3     = args['Item3']
@@ -42,7 +41,10 @@ AddEventHandler( 'syn:craftingalg', function (args,countz)
             if count2 == min4 then 
                 VorpInv.subItem(source, item, count)
                 TriggerClientEvent("syn:crafting", source)
-                VorpInv.addItem(source, reward, RewardCount)
+                for k,v in pairs(reward) do
+                    local countx = v.count * countz
+                    VorpInv.addItem(source, v.name, countx)
+                end
                 TriggerClientEvent("vorp:TipRight", source, "You finished crafting", 3000)
             elseif min2 > min4 then 
                 if count3 == min4 then
@@ -50,7 +52,10 @@ AddEventHandler( 'syn:craftingalg', function (args,countz)
                         VorpInv.subItem(source, item, count)
                         VorpInv.subItem(source, item2, count2)
                         TriggerClientEvent("syn:crafting", source)
-                        VorpInv.addItem(source, reward, RewardCount)
+                        for k,v in pairs(reward) do
+                            local countx = v.count * countz
+                            VorpInv.addItem(source, v.name, countx)
+                        end
                         TriggerClientEvent("vorp:TipRight", source, "You finished crafting", 3000)
                     else
                         TriggerClientEvent("vorp:TipRight", source, "Not enough material for this recipe", 3000)
@@ -61,7 +66,10 @@ AddEventHandler( 'syn:craftingalg', function (args,countz)
                         VorpInv.subItem(source, item2, count2)
                         VorpInv.subItem(source, item3, count3)
                         TriggerClientEvent("syn:crafting", source)
-                        VorpInv.addItem(source, reward, RewardCount)
+                        for k,v in pairs(reward) do
+                            local countx = v.count * countz
+                            VorpInv.addItem(source, v.name, countx)
+                        end
                         TriggerClientEvent("vorp:TipRight", source, "You finished crafting", 3000)
                     else
                         TriggerClientEvent("vorp:TipRight", source, "Not enough material for this recipe", 3000)

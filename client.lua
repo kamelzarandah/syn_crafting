@@ -80,14 +80,16 @@ Citizen.CreateThread(function()
         Citizen.Wait(1)
         local player = PlayerPedId()
         local Coords = GetEntityCoords(player)
-        local campfire = DoesObjectOfTypeExistAtCoords(Coords.x, Coords.y, Coords.z, 1.5, GetHashKey("p_campfire02x"), 0) -- prop required to interact
-        if campfire ~= false and iscrafting == false then 
-            DrawTxt("Press [~e~G~q~] to Craft", 0.50, 0.95, 0.7, 0.5, true, 255, 255, 255, 255, true)
+        for k,v in pairs(Config.craftingprops) do 
+            local campfire = DoesObjectOfTypeExistAtCoords(Coords.x, Coords.y, Coords.z, 1.5, GetHashKey(v), 0) -- prop required to interact
+            if campfire ~= false and iscrafting == false then 
+                DrawTxt("Press [~e~G~q~] to Craft", 0.50, 0.95, 0.7, 0.5, true, 255, 255, 255, 255, true)
 
-            if whenKeyJustPressed(keys["G"]) then
-                if keyopen == false then
-                WarMenu.OpenMenu('Craft')
-                else end
+                if whenKeyJustPressed(keys["G"]) then
+                    if keyopen == false then
+                    WarMenu.OpenMenu('Craft')
+                    else end
+                end
             end
         end
     end
