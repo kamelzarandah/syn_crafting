@@ -7,6 +7,14 @@ end)
 
 VorpInv = exports.vorp_inventory:vorp_inventoryApi()
 
+RegisterServerEvent('syn:findjob')
+AddEventHandler( 'syn:findjob', function ()
+    local _source = source
+    local Character = VorpCore.getUser(_source).getUsedCharacter
+    local job = Character.job
+    TriggerClientEvent("syn_crafting:sendjob",_source,job)
+end)
+
 
 RegisterServerEvent('syn:craftingalg')
 AddEventHandler( 'syn:craftingalg', function (args,countz)
