@@ -8,16 +8,10 @@ Config.crafting = {
         ['SubText'] = "",
         ['Desc'] = "",
         ['Param'] = {
-            ['Item'] = "eggs",
-            ['Item2'] = "water",
-            ['Item3'] = "",
-            ['Count'] = 1,
-            ['Count2'] = 1,
-            ['Count3'] = 0,
-            ['Reward'] ={{ name = "boiledegg", count = 1}},
+            ['Items'] = {"eggs,1","water,1"},
+            ['Reward'] ={"boiledegg,1"},
             ['Job'] = 0, -- the job required
             ['prop'] = 0, -- 0 means any
-
         }
     }, 
      [2] = {
@@ -25,16 +19,10 @@ Config.crafting = {
         ['SubText'] = "",
         ['Desc'] = "",
         ['Param'] = {
-            ['Item'] = "a_c_fishsalmonsockeye_01_ms", 
-            ['Item2'] = "salt", 
-            ['Item3'] = "",
-            ['Count'] = 1, 
-            ['Count2'] = 1, 
-            ['Count3'] = 0,
-            ['Reward'] ={{ name = "consumable_salmon", count = 1}},
+            ['Items'] = {"a_c_fishsalmonsockeye_01_ms,1","salt,1"}, 
+            ['Reward'] ={"consumable_salmon,1"},
             ['Job'] = 0, 
             ['prop'] = {"p_campfire02x","p_campfirecombined02x"}, -- will only show in those 2 props 
-
         }
     },
     [3] = {
@@ -42,16 +30,10 @@ Config.crafting = {
         ['SubText'] = "",
         ['Desc'] = "",
         ['Param'] = {
-            ['Item'] = "a_c_fishbluegil_01_sm",
-            ['Item2'] = "carrots",
-            ['Item3'] = "consumable_corn",
-            ['Count'] = 1,
-            ['Count2'] = 1,
-            ['Count3'] = 1,
-            ['Reward'] ={{ name = "cookedbluegil", count = 1}},
+            ['Items'] = {"a_c_fishbluegil_01_sm,1","carrots,1","consumable_corn,1"},
+            ['Reward'] ={"cookedbluegil,1"},
             ['Job'] = 0, -- the job required
             ['prop'] = 0, -- 0 means any
-
         }
     },
     [4] = {
@@ -59,16 +41,10 @@ Config.crafting = {
         ['SubText'] = "",
         ['Desc'] = "",
         ['Param'] = {
-            ['Item'] = "cocoa",
-            ['Item2'] = "sugar",
-            ['Item3'] = "",
-            ['Count'] = 2,
-            ['Count2'] = 3,
-            ['Count3'] = 0,
-            ['Reward'] ={{ name = "consumable_chocolate_bar", count = 1}},
+            ['Items'] = {"cocoa,2","sugar,3"},
+            ['Reward'] ={"consumable_chocolate_bar,1"},
             ['Job'] = 0, -- the job required
             ['prop'] = 0, -- 0 means any
-
         }
     },
     [5] = {
@@ -76,16 +52,10 @@ Config.crafting = {
         ['SubText'] = "",
         ['Desc'] = "",
         ['Param'] = {
-            ['Item'] = "Black_Berry",
-            ['Item2'] = "Black_Currant",
-            ['Item3'] = "Creekplum",
-            ['Count'] = 2,
-            ['Count2'] = 1,
-            ['Count3'] = 1,
-            ['Reward'] ={{ name = "consumable_fruitsalad", count = 1}},
+            ['Items'] = {"Black_Berry,2","Black_Currant,1","Creekplum,1"},
+            ['Reward'] ={"consumable_fruitsalad,1"},
             ['Job'] = 0, -- the job required
             ['prop'] = 0, -- 0 means any
-
         } 
     },
     [6] = {
@@ -93,16 +63,10 @@ Config.crafting = {
         ['SubText'] = "",
         ['Desc'] = "",
         ['Param'] = {
-            ['Item'] = "meat",
-            ['Item2'] = "salt",
-            ['Item3'] = "",
-            ['Count'] = 2,
-            ['Count2'] = 2,
-            ['Count3'] = 0,
-            ['Reward'] ={{ name = "beefjerky", count = 1}},
+            ['Items'] = {"meat,2","salt,2"},
+            ['Reward'] ={"beefjerky,1"},
             ['Job'] = 0, -- the job required
             ['prop'] = 0, -- 0 means any
-
         }
     },
     [7] = {
@@ -110,13 +74,8 @@ Config.crafting = {
         ['SubText'] = "",
         ['Desc'] = "",
         ['Param'] = {
-            ['Item'] = "salt",
-            ['Item2'] = "meat",
-            ['Item3'] = "",
-            ['Count'] = 2,
-            ['Count2'] = 1,
-            ['Count3'] = 0,
-            ['Reward'] ={{ name = "consumable_bluegil", count = 1}},
+            ['Items'] = {"salt,2","meat,1"},
+            ['Reward'] ={"consumable_bluegil,1"},
             ['Job'] = 0, -- the job required
             ['prop'] = 0, -- 0 means any
 
@@ -127,13 +86,8 @@ Config.crafting = {
         ['SubText'] = "",
         ['Desc'] = "",
         ['Param'] = {
-            ['Item'] = "a_c_fishrainbowtrout_01_ms",
-            ['Item2'] = "Crows_Garlic",
-            ['Item3'] = "Oleander_Sage",
-            ['Count'] = 1,
-            ['Count2'] = 1,
-            ['Count3'] = 1,
-            ['Reward'] ={{ name = "consumable_trout", count = 1}},
+            ['Items'] = {"a_c_fishrainbowtrout_01_ms,1","Crows_Garlic,1","Oleander_Sage,1"},
+            ['Reward'] ={"consumable_trout,1"},
             ['Job'] = 0, -- the job required
             ['prop'] = 0, -- 0 means any
 
@@ -144,13 +98,8 @@ Config.crafting = {
         ['SubText'] = "",
         ['Desc'] = "",
         ['Param'] = {
-            ['Item'] = "Gamey_Meat",
-            ['Item2'] = "salt",
-            ['Item3'] = "",
-            ['Count'] = 1,
-            ['Count2'] = 2,
-            ['Count3'] = 0,
-            ['Reward'] ={{ name = "consumable_game", count = 1}},
+            ['Items'] = {"Gamey_Meat,1","salt,2"},
+            ['Reward'] ={"consumable_game,1"},
             ['Job'] = 0, -- the job required
             ['prop'] = 0, -- 0 means any
 
@@ -161,13 +110,8 @@ Config.crafting = {
         ['SubText'] = "",
         ['Desc'] = "",
         ['Param'] = {
-            ['Item'] = "sugar",
-            ['Item2'] = "water",
-            ['Item3'] = "Red_Raspberry",
-            ['Count'] = 1,
-            ['Count2'] = 1,
-            ['Count3'] = 1,
-            ['Reward'] ={{ name = "consumable_raspberrywater", count = 1}},
+            ['Items'] = {"sugar,1","water,1","Red_Raspberry,1"},
+            ['Reward'] ={"consumable_raspberrywater,1"},
             ['Job'] = 0, -- the job required
             ['prop'] = 0, -- 0 means any
 
@@ -178,13 +122,8 @@ Config.crafting = {
         ['SubText'] = "",
         ['Desc'] = "",
         ['Param'] = {
-            ['Item'] = "Indian_Tobbaco",
-            ['Item2'] = "rollingpaper",
-            ['Item3'] = "",
-            ['Count'] = 1,
-            ['Count2'] = 1,
-            ['Count3'] = 0,
-            ['Reward'] ={{ name = "cigarette", count = 1}},
+            ['Items'] = {"Indian_Tobbaco,1","rollingpaper,1"},
+            ['Reward'] ={"cigarette,1"},
             ['Job'] = 0, -- the job required
             ['prop'] = 0, -- 0 means any
 
@@ -195,13 +134,8 @@ Config.crafting = {
         ['SubText'] = "",
         ['Desc'] = "",
         ['Param'] = {
-            ['Item'] = "Indian_Tobbaco",
-            ['Item2'] = "rollingpaper",
-            ['Item3'] = "",
-            ['Count'] = 2,
-            ['Count2'] = 1,
-            ['Count3'] = 0,
-            ['Reward'] ={{ name = "cigar", count = 1}},
+            ['Items'] = {"Indian_Tobbaco,2","rollingpaper,1"},
+            ['Reward'] ={"cigar,1"},
             ['Job'] = 0, -- the job required
             ['prop'] = 0, -- 0 means any
 
@@ -212,16 +146,10 @@ Config.crafting = {
         ['SubText'] = "",
         ['Desc'] = "",
         ['Param'] = {
-            ['Item'] = "sugar",
-            ['Item2'] = "milk",
-            ['Item3'] = "",
-            ['Count'] = 2,
-            ['Count2'] = 2,
-            ['Count3'] = 0,
-            ['Reward'] ={{ name = "Caramel", count = 5}},
+            ['Items'] = {"sugar,2","milk,2"},
+            ['Reward'] ={"Caramel,5"},
             ['Job'] = 0, -- the job required
             ['prop'] = 0, -- 0 means any
-
         }
     },
     [14] = {
@@ -229,16 +157,10 @@ Config.crafting = {
         ['SubText'] = "",
         ['Desc'] = "",
         ['Param'] = {
-            ['Item'] = "morphine",
-            ['Item2'] = "acid",
-            ['Item3'] = "Blood_Flower",
-            ['Count'] = 2,
-            ['Count2'] = 2,
-            ['Count3'] = 2,
-            ['Reward'] ={{ name = "heroin", count = 1}},
+            ['Items'] = {"morphine,2","acid,2","Blood_Flower,2"},
+            ['Reward'] = {"heroin,1"},
             ['Job'] = 0, -- the job required
             ['prop'] = 0, -- 0 means any
-
         }
     },
     [15] = {
@@ -246,16 +168,10 @@ Config.crafting = {
         ['SubText'] = "",
         ['Desc'] = "",
         ['Param'] = {
-            ['Item'] = "goldnugget",
-            ['Item2'] = "",
-            ['Item3'] = "",
-            ['Count'] = 15,
-            ['Count2'] = 0,
-            ['Count3'] = 0,
-            ['Reward'] ={{ name = "goldbar", count = 1}},
+            ['Items'] = {"goldnugget,15"},
+            ['Reward'] = {"goldbar,1"},
             ['Job'] = 0, -- the job required
             ['prop'] = 0, -- 0 means any
-
         }
     },
     [16] = {
@@ -263,17 +179,10 @@ Config.crafting = {
         ['SubText'] = "",
         ['Desc'] = "",
         ['Param'] = {
-            ['Item'] = "wood",
-            ['Item2'] = "clay",
-            ['Item3'] = "copper",
-            ['Count'] = 2,
-            ['Count2'] = 1,
-            ['Count3'] = 2,
-            ['Reward'] ={{ name = "pipe", count = 1}},
-
+            ['Items'] = {"wood,2","clay,1","copper,2"},
+            ['Reward'] = {"pipe,1"},
             ['Job'] = 0, -- the job required
             ['prop'] = 0, -- 0 means any
-
         }
     },
     [17] = {
@@ -281,16 +190,10 @@ Config.crafting = {
         ['SubText'] = "",
         ['Desc'] = "",
         ['Param'] = {
-            ['Item'] = "Bitter_Weed",
-            ['Item2'] = "alcohol",
-            ['Item3'] = "",
-            ['Count'] = 2,
-            ['Count2'] = 1,
-            ['Count3'] = 0,
-            ['Reward'] ={{ name = "beer", count = 1}},
+            ['Items'] = {"Bitter_Weed,2","alcohol,1"},
+            ['Reward'] = {"beer,1"},
             ['Job'] = {"saloon","bastille"}, -- the job required
             ['prop'] = 0, -- 0 means any
-
         }
     },
     [18] = {
@@ -298,13 +201,8 @@ Config.crafting = {
         ['SubText'] = "",
         ['Desc'] = "",
         ['Param'] = {
-            ['Item'] = "Black_Berry",
-            ['Item2'] = "alcohol",
-            ['Item3'] = "",
-            ['Count'] = 2,
-            ['Count2'] = 1,
-            ['Count3'] = 0,
-            ['Reward'] ={{ name = "wine", count = 1}},
+            ['Items'] = {"Black_Berry,2","alcohol,1"},
+            ['Reward'] ={"wine,1"},
             ['Job'] = {"saloon","bastille"}, -- the job required
             ['prop'] = 0, -- 0 means any
 
@@ -315,13 +213,8 @@ Config.crafting = {
         ['SubText'] = "",
         ['Desc'] = "",
         ['Param'] = {
-            ['Item'] = "sugar",
-            ['Item2'] = "water",
-            ['Item3'] = "Black_Berry",
-            ['Count'] = 1,
-            ['Count2'] = 1,
-            ['Count3'] = 1,
-            ['Reward'] ={{ name = "consumable_raspberrywater", count = 1}},
+            ['Items'] = {"sugar,1","water,1","Black_Berry,1"},
+            ['Reward'] ={"consumable_raspberrywater,1"},
             ['Job'] = 0, -- the job required
             ['prop'] = 0, -- 0 means any
 
@@ -332,13 +225,8 @@ Config.crafting = {
         ['SubText'] = "",
         ['Desc'] = "",
         ['Param'] = {
-            ['Item'] = "SnakeSkin",
-            ['Item2'] = "acid",
-            ['Item3'] = "Bitter_Weed",
-            ['Count'] = 1,
-            ['Count2'] = 1,
-            ['Count3'] = 2,
-            ['Reward'] ={{ name = "Snake_Poison", count = 1}},
+            ['Items'] = {"SnakeSkin,1","acid,1","Bitter_Weed,2"},
+            ['Reward'] = {"Snake_Poison,1"},
             ['Job'] = 0, -- the job required
             ['prop'] = 0, -- 0 means any
 
@@ -349,16 +237,10 @@ Config.crafting = {
         ['SubText'] = "",
         ['Desc'] = "",
         ['Param'] = {
-            ['Item'] = "Parasol_Mushroom",
-            ['Item2'] = "English_Mace",
-            ['Item3'] = "Creeking_Thyme",
-            ['Count'] = 2,
-            ['Count2'] = 2,
-            ['Count3'] = 2,
-            ['Reward'] ={{ name = "herbmed", count = 1}},
+            ['Items'] = {"Parasol_Mushroom,2","English_Mace,2","Creeking_Thyme,2"},
+            ['Reward'] = {"herbmed,1"},
             ['Job'] = 0, -- the job required
             ['prop'] = 0, -- 0 means any
-
         }
     },
 
@@ -367,16 +249,10 @@ Config.crafting = {
         ['SubText'] = "",
         ['Desc'] = "",
         ['Param'] = {
-            ['Item'] = "Bitter_Weed",
-            ['Item2'] = "Black_Berry",
-            ['Item3'] = "alcohol",
-            ['Count'] = 1,
-            ['Count2'] = 2,
-            ['Count3'] = 1,
-            ['Reward'] ={{ name = "blackberryale", count = 1}},
+            ['Items'] = {"Bitter_Weed,1","Black_Berry,2","alcohol,1"},
+            ['Reward'] ={"blackberryale,1"},
             ['Job'] = {"saloon","bastille"}, -- the job required
             ['prop'] = 0, -- 0 means any
-
         }
     },
 
@@ -385,13 +261,8 @@ Config.crafting = {
         ['SubText'] = "",
         ['Desc'] = "",
         ['Param'] = {
-            ['Item'] = "Bitter_Weed",
-            ['Item2'] = "Red_Raspberry",
-            ['Item3'] = "alcohol",
-            ['Count'] = 1,
-            ['Count2'] = 2,
-            ['Count3'] = 1,
-            ['Reward'] ={{ name = "raspberryale", count = 1}},
+            ['Items'] = {"Bitter_Weed,1","Red_Raspberry,2","alcohol,1"},
+            ['Reward'] ={"raspberryale,1"},
             ['Job'] = {"saloon","bastille"}, -- the job required
             ['prop'] = 0, -- 0 means any
 
@@ -403,16 +274,10 @@ Config.crafting = {
         ['SubText'] = "",
         ['Desc'] = "",
         ['Param'] = {
-            ['Item'] = "synpackage",
-            ['Item2'] = "",
-            ['Item3'] = "",
-            ['Count'] = 1,
-            ['Count2'] = 0,
-            ['Count3'] = 0,
-            ['Reward'] ={{ name = "syn", count = 5}},
+            ['Items'] = {"synpackage,1"},
+            ['Reward'] ={"syn,5"},
             ['Job'] = {"saloon","bastille"}, -- the job required
             ['prop'] = 0, -- 0 means any
-
         }
     },
     
@@ -421,16 +286,10 @@ Config.crafting = {
         ['SubText'] = "",
         ['Desc'] = "",
         ['Param'] = {
-            ['Item'] = "eggs",
-            ['Item2'] = "meat",
-            ['Item3'] = "salt",
-            ['Count'] = 2,
-            ['Count2'] = 2,
-            ['Count3'] = 1,
-            ['Reward'] ={{ name = "consumable_breakfast", count = 1}},
+            ['Items'] = {"eggs,2","meat,2","salt,1"},
+            ['Reward'] ={"consumable_breakfast,1"},
             ['Job'] = 0, -- the job required
             ['prop'] = 0, -- 0 means any
-
         }
     },
     [26] = {
@@ -438,16 +297,10 @@ Config.crafting = {
         ['SubText'] = "",
         ['Desc'] = "",
         ['Param'] = {
-            ['Item'] = "Crows_Garlic",
-            ['Item2'] = "Parasol_Mushroom",
-            ['Item3'] = "Wild_Carrot",
-            ['Count'] = 1,
-            ['Count2'] = 1,
-            ['Count3'] = 1,
-            ['Reward'] ={{ name = "consumable_veggies", count = 1}},
+            ['Items'] = {"Crows_Garlic,1","Parasol_Mushroom,1","Wild_Carrot,1"},
+            ['Reward'] ={"consumable_veggies,1"},
             ['Job'] = 0, -- the job required
             ['prop'] = 0, -- 0 means any
-
         }
     },
 
@@ -456,16 +309,10 @@ Config.crafting = {
         ['SubText'] = "",
         ['Desc'] = "",
         ['Param'] = {
-            ['Item'] = "glassbottle",
-            ['Item2'] = "wateringcan",
-            ['Item3'] = "",
-            ['Count'] = 1,
-            ['Count2'] = 1,
-            ['Count3'] = 0,
-            ['Reward'] ={{ name = "water", count = 1},{ name = "wateringcan_empty", count = 1}},
+            ['Items'] = {"glassbottle,1","wateringcan,1"},
+            ['Reward'] ={"water,1","wateringcan_empty,1"},
             ['Job'] = 0, -- the job required
             ['prop'] = 0, -- 0 means any
-
         }
     },
 
@@ -474,19 +321,11 @@ Config.crafting = {
         ['SubText'] = "",
         ['Desc'] = "",
         ['Param'] = {
-            ['Item'] = "water",
-            ['Item2'] = "sugar",
-            ['Item3'] = "American_Ginseng",
-            ['Count'] = 1,
-            ['Count2'] = 1,
-            ['Count3'] = 1,
-            ['Reward'] ={{ name = "ginsengtea", count = 1}},
+            ['Items'] = {"water,1","sugar,1","American_Ginseng,1"},
+            ['Reward'] ={"ginsengtea,1"},
             ['Job'] = 0, -- the job required
             ['prop'] = 0, -- 0 means any
 
         }
     },
-
-    
-
 }
