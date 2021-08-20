@@ -27,7 +27,7 @@ AddEventHandler( 'syn:craftingalg', function (params, amount)
         return
     end
 
-    for _, param in pairs(params)
+    for _, param in pairs(params) do
         local itemName, itemAmount = string.match(param.Items, "(%a+)%s*,%s*(%d+)")
         local totalAmount = itemAmount * amount
         local playerItemAmount = VorpInv.getItemCount(_source, itemName)
