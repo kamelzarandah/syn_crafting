@@ -27,9 +27,9 @@ AddEventHandler( 'syn:craftingalg', function (params, amount)
         return
     end
 
-    for _, param in pairs(params) do
-        local itemName, itemAmount = string.match(param.Items, "(%a+)%s*,%s*(%d+)")
-        local totalAmount = itemAmount * amount
+    for _, item in pairs(params.Items) do
+        local itemName, itemAmount = string.match(item, "(%a+)%s*,%s*(%d+)")
+        local totalAmount = tonumber(itemAmount) * amount
         local playerItemAmount = VorpInv.getItemCount(_source, itemName)
         
         if totalAmount > playerItemAmount then
@@ -42,7 +42,7 @@ AddEventHandler( 'syn:craftingalg', function (params, amount)
 
     for _, item in pairs(params.Reward) do
         local itemName, itemAmount = string.match(item, "(%a+)%s*,%s*(%d+)")
-        VorpInv.addItem(_source, itemName, iteAmount * amount)
+        VorpInv.addItem(_source, itemName, tonumber(iteAmount) * amount)
     end
     TriggerClientEvent("vorp:TipRight", source, "You finished crafting", 3000)
 end)
