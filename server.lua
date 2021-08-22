@@ -21,14 +21,15 @@ AddEventHandler( 'syn:craftingalg', function (params, amount)
     local _source = source
     local Character = VorpCore.getUser(_source).getUsedCharacter
     local playerJob = Character.job
+    local itemsToSub = {}
     local rewardItem = params.Reward
-
+    
     if params.Job ~= 0 and params.Job ~= playerJob then
         return
     end
 
     for _, item in pairs(params.Items) do
-        local itemName, itemAmount = string.match(item, "(%a+)%s*,%s*(%d+)")
+        local itemName, itemAmount = string.match(item, "(%a.+)%s*,%s*(%d+)")
         local totalAmount = tonumber(itemAmount) * amount
         local playerItemAmount = VorpInv.getItemCount(_source, itemName)
         
@@ -36,14 +37,19 @@ AddEventHandler( 'syn:craftingalg', function (params, amount)
             TriggerClientEvent("vorp:TipRight", source, "Not enough material for this recipe", 3000)
             return
         end
-        VorpInv.subItem(_source, itemName, totalAmount)
+        table.insert(itemsToSub, {name = itemName, amount = totalAmount})
     end
     TriggerClientEvent("syn:crafting", source)
-
+    
     for _, item in pairs(params.Reward) do
-        local itemName, itemAmount = string.match(item, "(%a+)%s*,%s*(%d+)")
+        local itemName, itemAmount = string.match(item, "(%a.+)%s*,%s*(%d+)")
         VorpInv.addItem(_source, itemName, tonumber(itemAmount) * amount)
     end
+    
+    for _, itemToSub in pairs(itemsToSub) do
+        VorpInv.subItem(_source, itemToSub.name, itemToSub.amount)
+    end
+
     TriggerClientEvent("vorp:TipRight", source, "You finished crafting", 3000)
 end)
 --[[ VorpInv.RegisterUsableItem("campfire", function(data)
