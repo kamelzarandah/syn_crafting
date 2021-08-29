@@ -15,6 +15,15 @@ AddEventHandler( 'syn:findjob', function ()
     TriggerClientEvent("syn_crafting:sendjob",_source,job)
 end)
 
+function IsJobAllowed (_table, job) 
+    if _table == job then return true end
+    for _, _job in pairs(_table) do
+        if job == _job then
+            return true
+        end
+    end
+    return false
+end
 
 RegisterServerEvent('syn:craftingalg')
 AddEventHandler( 'syn:craftingalg', function (params, amount)
@@ -24,7 +33,8 @@ AddEventHandler( 'syn:craftingalg', function (params, amount)
     local itemsToSub = {}
     local rewardItem = params.Reward
     
-    if params.Job ~= 0 and params.Job ~= playerJob then
+    if params.Job ~= 0 and not IsJobAllowed(params.Job, playerJob) then
+        TriggerClientEvent("vorp:TipRight", source, "You can't make this recipe", 3000)
         return
     end
 
