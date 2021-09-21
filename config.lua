@@ -1,6 +1,6 @@
 Config = {}
 
-Config.craftingprops = {"p_campfire02x","p_campfirecombined02x"}
+Config.craftingprops = {"p_campfire02x","p_campfirecombined02x","p_campfirecombined03x","p_kettle03x","p_campfirecombined04x"}
 
 Config.crafting = {
     [1] = {
@@ -33,7 +33,7 @@ Config.crafting = {
             ['Count3'] = 0,
             ['Reward'] ={{ name = "consumable_salmon", count = 1}},
             ['Job'] = 0, 
-            ['prop'] = {"p_campfire02x","p_campfirecombined02x"}, -- will only show in those 2 props 
+            ['prop'] = {"p_campfire02x","p_campfirecombined02x","p_campfirecombined03x","p_kettle03x"}, -- will only show in those 2 props 
 
         }
     },
