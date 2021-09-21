@@ -58,7 +58,7 @@ Citizen.CreateThread( function()
 		if WarMenu.IsMenuOpened('craftmenu') then
 			for i = 1, #craftingx do
                 if contains(craftingx[i]['Param']['prop'], propinfo) or craftingx[i]['Param']['prop'] == 0 then 
-                    --if contains(craftingx[i]['Param']['Job'], playerjob) or craftingx[i]['Param']['Job'] == 0 then 
+                    if contains(craftingx[i]['Param']['Job'], playerjob) or craftingx[i]['Param']['Job'] == 0 then 
 				        if WarMenu.Button(craftingx[i]['Text'], craftingx[i]['SubText'], craftingx[i]['Desc']) then
                             TriggerEvent("vorpinputs:getInput","Confirm","Amount", function(cb)
                                 local count = tonumber(cb)
@@ -70,7 +70,7 @@ Citizen.CreateThread( function()
                             end)
 				        	WarMenu.CloseMenu()
 				        end
-                    --end
+                    end
                 end
 			end
 			WarMenu.Display()
