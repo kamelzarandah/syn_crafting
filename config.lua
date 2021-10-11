@@ -1,5 +1,14 @@
 Config = {}
 
+
+Config.locationalonly = true
+Config.interactiondist = 2.5 -- distance to interact with location
+
+Config.locations = { -- list of all crafting locations
+    ["location1"] = {x = -1136.9,y = 270.47,z =42.9},
+    ["location2"] = {x = 0,y = 0,z =0},
+}
+
 Config.craftingprops = {"p_campfire02x","p_campfirecombined02x","p_campfirecombined03x","p_kettle03x","p_campfirecombined04x"}
 
 Config.crafting = {
@@ -17,6 +26,7 @@ Config.crafting = {
             ['Reward'] ={{ name = "boiledegg", count = 1}},
             ['Job'] = 0, -- the job required
             ['prop'] = 0, -- 0 means any
+            ['location'] = {"location1"}, -- keep 0 to allow crafting from any marked location
 
         }
     }, 
@@ -34,6 +44,7 @@ Config.crafting = {
             ['Reward'] ={{ name = "consumable_salmon", count = 1}},
             ['Job'] = 0, 
             ['prop'] = {"p_campfire02x","p_campfirecombined02x","p_campfirecombined03x","p_kettle03x"}, -- will only show in those 2 props 
+            ['location'] = {"location1","location2"}, -- this item can only be crafted in location 1 and 2 
 
         }
     },
@@ -51,6 +62,7 @@ Config.crafting = {
             ['Reward'] ={{ name = "cookedbluegil", count = 1}},
             ['Job'] = 0, -- the job required
             ['prop'] = 0, -- 0 means any
+            ['location'] = 0, 
 
         }
     },
@@ -68,6 +80,7 @@ Config.crafting = {
             ['Reward'] ={{ name = "consumable_chocolate_bar", count = 1}},
             ['Job'] = 0, -- the job required
             ['prop'] = 0, -- 0 means any
+            ['location'] = 0, 
 
         }
     },
@@ -85,6 +98,7 @@ Config.crafting = {
             ['Reward'] ={{ name = "consumable_fruitsalad", count = 1}},
             ['Job'] = 0, -- the job required
             ['prop'] = 0, -- 0 means any
+            ['location'] = 0, 
 
         } 
     },
@@ -102,6 +116,7 @@ Config.crafting = {
             ['Reward'] ={{ name = "beefjerky", count = 1}},
             ['Job'] = 0, -- the job required
             ['prop'] = 0, -- 0 means any
+            ['location'] = 0, 
 
         }
     },
@@ -119,6 +134,7 @@ Config.crafting = {
             ['Reward'] ={{ name = "consumable_bluegil", count = 1}},
             ['Job'] = 0, -- the job required
             ['prop'] = 0, -- 0 means any
+            ['location'] = 0, 
 
         }
     },
@@ -136,6 +152,7 @@ Config.crafting = {
             ['Reward'] ={{ name = "consumable_trout", count = 1}},
             ['Job'] = 0, -- the job required
             ['prop'] = 0, -- 0 means any
+            ['location'] = 0, 
 
         }
     },
@@ -153,6 +170,7 @@ Config.crafting = {
             ['Reward'] ={{ name = "consumable_game", count = 1}},
             ['Job'] = 0, -- the job required
             ['prop'] = 0, -- 0 means any
+            ['location'] = 0, 
 
         }
     },
@@ -170,6 +188,7 @@ Config.crafting = {
             ['Reward'] ={{ name = "consumable_raspberrywater", count = 1}},
             ['Job'] = 0, -- the job required
             ['prop'] = 0, -- 0 means any
+            ['location'] = 0, 
 
         }
     },
@@ -187,6 +206,7 @@ Config.crafting = {
             ['Reward'] ={{ name = "cigarette", count = 1}},
             ['Job'] = 0, -- the job required
             ['prop'] = 0, -- 0 means any
+            ['location'] = 0, 
 
         }
     },
@@ -204,6 +224,7 @@ Config.crafting = {
             ['Reward'] ={{ name = "cigar", count = 1}},
             ['Job'] = 0, -- the job required
             ['prop'] = 0, -- 0 means any
+            ['location'] = 0, 
 
         }
     },
@@ -221,6 +242,7 @@ Config.crafting = {
             ['Reward'] ={{ name = "Caramel", count = 5}},
             ['Job'] = 0, -- the job required
             ['prop'] = 0, -- 0 means any
+            ['location'] = 0, 
 
         }
     },
@@ -238,6 +260,7 @@ Config.crafting = {
             ['Reward'] ={{ name = "heroin", count = 1}},
             ['Job'] = 0, -- the job required
             ['prop'] = 0, -- 0 means any
+            ['location'] = 0, 
 
         }
     },
@@ -255,6 +278,7 @@ Config.crafting = {
             ['Reward'] ={{ name = "goldbar", count = 1}},
             ['Job'] = 0, -- the job required
             ['prop'] = 0, -- 0 means any
+            ['location'] = 0, 
 
         }
     },
@@ -273,6 +297,7 @@ Config.crafting = {
 
             ['Job'] = 0, -- the job required
             ['prop'] = 0, -- 0 means any
+            ['location'] = 0, 
 
         }
     },
@@ -290,6 +315,7 @@ Config.crafting = {
             ['Reward'] ={{ name = "beer", count = 1}},
             ['Job'] = {"saloon","bastille"}, -- the job required
             ['prop'] = 0, -- 0 means any
+            ['location'] = 0, 
 
         }
     },
@@ -307,6 +333,7 @@ Config.crafting = {
             ['Reward'] ={{ name = "wine", count = 1}},
             ['Job'] = {"saloon","bastille"}, -- the job required
             ['prop'] = 0, -- 0 means any
+            ['location'] = 0, 
 
         }
     },
@@ -324,6 +351,7 @@ Config.crafting = {
             ['Reward'] ={{ name = "consumable_raspberrywater", count = 1}},
             ['Job'] = 0, -- the job required
             ['prop'] = 0, -- 0 means any
+            ['location'] = 0, 
 
         }
     },
@@ -341,6 +369,7 @@ Config.crafting = {
             ['Reward'] ={{ name = "Snake_Poison", count = 1}},
             ['Job'] = 0, -- the job required
             ['prop'] = 0, -- 0 means any
+            ['location'] = 0, 
 
         }
     },
@@ -358,6 +387,7 @@ Config.crafting = {
             ['Reward'] ={{ name = "herbmed", count = 1}},
             ['Job'] = 0, -- the job required
             ['prop'] = 0, -- 0 means any
+            ['location'] = 0, 
 
         }
     },
@@ -376,6 +406,7 @@ Config.crafting = {
             ['Reward'] ={{ name = "blackberryale", count = 1}},
             ['Job'] = {"saloon","bastille"}, -- the job required
             ['prop'] = 0, -- 0 means any
+            ['location'] = 0, 
 
         }
     },
@@ -394,6 +425,7 @@ Config.crafting = {
             ['Reward'] ={{ name = "raspberryale", count = 1}},
             ['Job'] = {"saloon","bastille"}, -- the job required
             ['prop'] = 0, -- 0 means any
+            ['location'] = 0, 
 
         }
     },
@@ -412,6 +444,7 @@ Config.crafting = {
             ['Reward'] ={{ name = "syn", count = 5}},
             ['Job'] = {"saloon","bastille"}, -- the job required
             ['prop'] = 0, -- 0 means any
+            ['location'] = 0, 
 
         }
     },
@@ -430,6 +463,7 @@ Config.crafting = {
             ['Reward'] ={{ name = "consumable_breakfast", count = 1}},
             ['Job'] = 0, -- the job required
             ['prop'] = 0, -- 0 means any
+            ['location'] = 0, 
 
         }
     },
@@ -447,6 +481,7 @@ Config.crafting = {
             ['Reward'] ={{ name = "consumable_veggies", count = 1}},
             ['Job'] = 0, -- the job required
             ['prop'] = 0, -- 0 means any
+            ['location'] = 0, 
 
         }
     },
@@ -465,6 +500,7 @@ Config.crafting = {
             ['Reward'] ={{ name = "water", count = 1},{ name = "wateringcan_empty", count = 1}},
             ['Job'] = 0, -- the job required
             ['prop'] = 0, -- 0 means any
+            ['location'] = 0, 
 
         }
     },
@@ -483,6 +519,7 @@ Config.crafting = {
             ['Reward'] ={{ name = "ginsengtea", count = 1}},
             ['Job'] = 0, -- the job required
             ['prop'] = 0, -- 0 means any
+            ['location'] = 0, 
 
         }
     },
