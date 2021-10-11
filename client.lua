@@ -58,6 +58,7 @@ Citizen.CreateThread( function()
 	repeat
 		if WarMenu.IsMenuOpened('craftmenu') then
 			for i = 1, #craftingx do
+                if loctitle ~= 0  then 
                     if contains(craftingx[i]['Param']['location'], loctitle) then
                         if contains(craftingx[i]['Param']['Job'], playerjob) or craftingx[i]['Param']['Job'] == 0 then 
 				            if WarMenu.Button(craftingx[i]['Text'], craftingx[i]['SubText'], craftingx[i]['Desc']) then
@@ -72,7 +73,9 @@ Citizen.CreateThread( function()
 				            	WarMenu.CloseMenu()
 				            end
                         end
-                    elseif craftingx[i]['Param']['location'] == 0 then 
+                    end
+                else
+                    if craftingx[i]['Param']['location'] == 0 then 
                         if contains(craftingx[i]['Param']['prop'], propinfo) or craftingx[i]['Param']['prop'] == 0 then 
                             if contains(craftingx[i]['Param']['Job'], playerjob) or craftingx[i]['Param']['Job'] == 0 then 
 				                if WarMenu.Button(craftingx[i]['Text'], craftingx[i]['SubText'], craftingx[i]['Desc']) then
@@ -89,6 +92,7 @@ Citizen.CreateThread( function()
                             end
                         end
                     end
+                end
                 
                     
                 
@@ -123,6 +127,7 @@ Citizen.CreateThread(function()
                         Wait(500)
                         if keyopen == false then
                         propinfo = v
+                        loctitle = 0
                         WarMenu.OpenMenu('Craft')
                         else end
                     end

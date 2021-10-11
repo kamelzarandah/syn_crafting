@@ -23,7 +23,7 @@ Config.crafting = {
             ['Count2'] = 1,
             ['Count3'] = 0,
             ['Reward'] ={{ name = "boiledegg", count = 1}},
-            ['Job'] = 0, -- the job required
+            ['Job'] = {"cook"}, -- the job required
             ['prop'] = 0, -- 0 means any
             ['location'] = {"location1"}, -- keep 0 to allow crafting from any marked location
 
