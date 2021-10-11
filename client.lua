@@ -58,8 +58,7 @@ Citizen.CreateThread( function()
 	repeat
 		if WarMenu.IsMenuOpened('craftmenu') then
 			for i = 1, #craftingx do
-                if not Config.locationalonly then 
-                    if contains(craftingx[i]['Param']['prop'], propinfo) or craftingx[i]['Param']['prop'] == 0 then 
+                    if contains(craftingx[i]['Param']['location'], loctitle) then
                         if contains(craftingx[i]['Param']['Job'], playerjob) or craftingx[i]['Param']['Job'] == 0 then 
 				            if WarMenu.Button(craftingx[i]['Text'], craftingx[i]['SubText'], craftingx[i]['Desc']) then
                                 TriggerEvent("vorpinputs:getInput","Confirm","Amount", function(cb)
@@ -73,24 +72,26 @@ Citizen.CreateThread( function()
 				            	WarMenu.CloseMenu()
 				            end
                         end
-                    end
-                else
-                    if contains(craftingx[i]['Param']['location'], loctitle) or craftingx[i]['Param']['location'] == 0 then 
-                        if contains(craftingx[i]['Param']['Job'], playerjob) or craftingx[i]['Param']['Job'] == 0 then 
-				            if WarMenu.Button(craftingx[i]['Text'], craftingx[i]['SubText'], craftingx[i]['Desc']) then
-                                TriggerEvent("vorpinputs:getInput","Confirm","Amount", function(cb)
-                                    local count = tonumber(cb)
-                                    if count ~= nil and count ~= 'close' and count ~= '' and count ~= 0 then
-                                        TriggerServerEvent('syn:craftingalg', craftingx[i]['Param'],count)
-                                    else
-                                        TriggerEvent("vorp:TipBottom", "Invalid Amount", 4000)
-                                    end
-                                end)
-				            	WarMenu.CloseMenu()
-				            end
+                    elseif craftingx[i]['Param']['location'] == 0 then 
+                        if contains(craftingx[i]['Param']['prop'], propinfo) or craftingx[i]['Param']['prop'] == 0 then 
+                            if contains(craftingx[i]['Param']['Job'], playerjob) or craftingx[i]['Param']['Job'] == 0 then 
+				                if WarMenu.Button(craftingx[i]['Text'], craftingx[i]['SubText'], craftingx[i]['Desc']) then
+                                    TriggerEvent("vorpinputs:getInput","Confirm","Amount", function(cb)
+                                        local count = tonumber(cb)
+                                        if count ~= nil and count ~= 'close' and count ~= '' and count ~= 0 then
+                                            TriggerServerEvent('syn:craftingalg', craftingx[i]['Param'],count)
+                                        else
+                                            TriggerEvent("vorp:TipBottom", "Invalid Amount", 4000)
+                                        end
+                                    end)
+				                	WarMenu.CloseMenu()
+				                end
+                            end
                         end
                     end
-                end
+                
+                    
+                
 			end
 			WarMenu.Display()
 		end
@@ -113,7 +114,6 @@ Citizen.CreateThread(function()
         Citizen.Wait(1)
         local player = PlayerPedId()
         local Coords = GetEntityCoords(player)
-        if not Config.locationalonly then 
             for k,v in pairs(Config.craftingprops) do 
                 local campfire = DoesObjectOfTypeExistAtCoords(Coords.x, Coords.y, Coords.z, 1.5, GetHashKey(v), 0) -- prop required to interact
                 if campfire ~= false and iscrafting == false then 
@@ -128,7 +128,6 @@ Citizen.CreateThread(function()
                     end
                 end
             end
-        else
             for k,v in pairs(Config.locations) do 
                 local dist = GetDistanceBetweenCoords(v.x,v.y,v.z, Coords.x,Coords.y,Coords.z, 0)
                 if 2.5 > dist then
@@ -143,7 +142,6 @@ Citizen.CreateThread(function()
                     end
                 end
             end
-        end
     end
 end)
 

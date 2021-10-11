@@ -1,7 +1,6 @@
 Config = {}
 
 
-Config.locationalonly = true
 Config.interactiondist = 2.5 -- distance to interact with location
 
 Config.locations = { -- list of all crafting locations
